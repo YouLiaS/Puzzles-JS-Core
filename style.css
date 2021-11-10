@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif,
+    Courier,
+    monospace;
+  height: 100vh;
+  background-color: #070329;
+  color: white;
+}
+
+.wrapper {
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.top {
+  width: 800px;
+  height: 30vh;
+}
+
+.timer {
+  width: 800px;
+  height: 18vh;
+  font-size: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  width: 800px;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: firebrick;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 9px 22px;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn:not(:last-child) {
+  margin-right: 25px;
+}
+
+.puzzles {
+  width: 800px;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 403px;
+  height: 400px;
+  border: 1px solid #ccc;
+}
+
+.puzzle-block,
+.pieces-block {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . .";
+}
+
+.pieces-block {
+  margin-right: 40px;
+  position: relative;
+}
+
+.piece {
+  cursor: grab;
+}
+
+.piece:active {
+  cursor: grabbing;
+}
+
+/* modal */
+
+.modal {
+  background-color: #fff;
+  position: absolute;
+  width: 600px;
+  height: 25vh;
+  margin: 0 auto;
+  top: 10vh;
+  right: 0;
+  left: 0;
+  border-radius: 15px;
+  z-index: 4;
+}
+
+.messages {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  font-size: 2rem;
+  font-weight: 300;
+  color: black;
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__buttons .btn:nth-child(2) {
+  background-color: #008000;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ccccccc5;
+  z-index: 3;
+}
+
+/* java script */
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+/* puzzle */
+
+.piece {
+  width: 100px;
+  height: 100px;
+}
+
+.piece[data-count="1"] {
+  background-image: url('img/1.jpg');
+  background-position: 0 0;
+}
+
+
+.piece[data-count="2"] {
+  background-image: url('img/1.jpg');
+  background-position: -100px 0;
+}
+
+
+.piece[data-count="3"] {
+  background-image: url('img/1.jpg');
+  background-position: -200px 0;
+}
+
+
+.piece[data-count="4"] {
+  background-image: url('img/1.jpg');
+  background-position: -300px 0;
+}
+
+
+.piece[data-count="5"] {
+  background-image: url('img/1.jpg');
+  background-position: 0px -100px;
+}
+
+
+.piece[data-count="6"] {
+  background-image: url('img/1.jpg');
+  background-position: -100px -100px;
+}
+
+
+.piece[data-count="7"] {
+  background-image: url('img/1.jpg');
+  background-position: -200px -100px;
+}
+
+
+.piece[data-count="8"] {
+  background-image: url('img/1.jpg');
+  background-position: -300px -100px;
+}
+
+.piece[data-count="9"] {
+  background-image: url('img/1.jpg');
+  background-position: 0px -200px;
+}
+
+
+.piece[data-count="10"] {
+  background-image: url('img/1.jpg');
+  background-position: -100px -200px;
+}
+
+.piece[data-count="11"] {
+  background-image: url('img/1.jpg');
+  background-position: -200px -200px;
+}
+
+
+.piece[data-count="12"] {
+  background-image: url('img/1.jpg');
+  background-position: -300px -200px;
+}
+
+
+.piece[data-count="13"] {
+  background-image: url('img/1.jpg');
+  background-position: 0 -300px;
+}
+
+
+.piece[data-count="14"] {
+  background-image: url('img/1.jpg');
+  background-position: -100px -300px;
+}
+
+
+.piece[data-count="15"] {
+  background-image: url('img/1.jpg');
+  background-position: -200px -300px;
+}
+
+.piece[data-count="16"] {
+  background-image: url('img/1.jpg');
+  background-position: -300px -300px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top">
+      <div class="timer">01:00</div>
+      <div class="buttons">
+        <button class="btn" id="start-game">Start game</button>
+        <button class="btn disabled" id="check-result" disabled>Check result</button>
+        <button class="btn" id="new-game">New game</button>
+      </div>
+    </div>
+    <div class="puzzles">
+      <div class="box pieces-block">
+      </div>
+      <div class="box puzzle-block">
+      </div>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div class="modal hidden">
+    <div class="messages">
+      <p class="messages-title"></p>
+      <span class="messages-timer"></span>
+    </div>
+    <div class="modal__buttons">
+      <button class="btn" id="modal-close">Close</button>
+      <button class="btn" id="modal-check">Check</button>
+    </div>
+  </div>
+
+  <div class="bg hidden"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
